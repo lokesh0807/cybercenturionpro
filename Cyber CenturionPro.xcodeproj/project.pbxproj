@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		CFA0589C202F6F2E005E6347 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA0589B202F6F2E005E6347 /* AppDelegate.swift */; };
-		CFA0589E202F6F2E005E6347 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA0589D202F6F2E005E6347 /* ViewController.swift */; };
 		CFA058A1202F6F2E005E6347 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA0589F202F6F2E005E6347 /* Main.storyboard */; };
 		CFA058A3202F6F2E005E6347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA058A2202F6F2E005E6347 /* Assets.xcassets */; };
 		CFA058A6202F6F2E005E6347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA058A4202F6F2E005E6347 /* LaunchScreen.storyboard */; };
 		CFA058B1202F6F2E005E6347 /* Cyber_CenturionProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA058B0202F6F2E005E6347 /* Cyber_CenturionProTests.swift */; };
 		CFA058BC202F6F2E005E6347 /* Cyber_CenturionProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA058BB202F6F2E005E6347 /* Cyber_CenturionProUITests.swift */; };
+		CFA058D320303A07005E6347 /* OverlayMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA058D020303A06005E6347 /* OverlayMenuViewController.swift */; };
+		CFA058D420303A07005E6347 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA058D120303A06005E6347 /* Home.swift */; };
+		CFA058D520303A07005E6347 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA058D220303A06005E6347 /* SettingsViewController.swift */; };
+		CFA058D8203C943A005E6347 /* CommonUttils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA058D7203C943A005E6347 /* CommonUttils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		CFA05898202F6F2E005E6347 /* Cyber CenturionPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cyber CenturionPro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA0589B202F6F2E005E6347 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFA0589D202F6F2E005E6347 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFA058A0202F6F2E005E6347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFA058A2202F6F2E005E6347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFA058A5202F6F2E005E6347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		CFA058B7202F6F2E005E6347 /* Cyber CenturionProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cyber CenturionProUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA058BB202F6F2E005E6347 /* Cyber_CenturionProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cyber_CenturionProUITests.swift; sourceTree = "<group>"; };
 		CFA058BD202F6F2E005E6347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFA058D020303A06005E6347 /* OverlayMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayMenuViewController.swift; sourceTree = "<group>"; };
+		CFA058D120303A06005E6347 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		CFA058D220303A06005E6347 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CFA058D7203C943A005E6347 /* CommonUttils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUttils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,9 @@
 		CFA0589A202F6F2E005E6347 /* Cyber CenturionPro */ = {
 			isa = PBXGroup;
 			children = (
+				CFA058D6203C940A005E6347 /* CommonClass */,
+				CFA058CF20303A06005E6347 /* Viewcontrollers */,
 				CFA0589B202F6F2E005E6347 /* AppDelegate.swift */,
-				CFA0589D202F6F2E005E6347 /* ViewController.swift */,
 				CFA0589F202F6F2E005E6347 /* Main.storyboard */,
 				CFA058A2202F6F2E005E6347 /* Assets.xcassets */,
 				CFA058A4202F6F2E005E6347 /* LaunchScreen.storyboard */,
@@ -123,6 +130,24 @@
 				CFA058BD202F6F2E005E6347 /* Info.plist */,
 			);
 			path = "Cyber CenturionProUITests";
+			sourceTree = "<group>";
+		};
+		CFA058CF20303A06005E6347 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				CFA058D120303A06005E6347 /* Home.swift */,
+				CFA058D020303A06005E6347 /* OverlayMenuViewController.swift */,
+				CFA058D220303A06005E6347 /* SettingsViewController.swift */,
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		CFA058D6203C940A005E6347 /* CommonClass */ = {
+			isa = PBXGroup;
+			children = (
+				CFA058D7203C943A005E6347 /* CommonUttils.swift */,
+			);
+			path = CommonClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFA0589E202F6F2E005E6347 /* ViewController.swift in Sources */,
+				CFA058D320303A07005E6347 /* OverlayMenuViewController.swift in Sources */,
+				CFA058D420303A07005E6347 /* Home.swift in Sources */,
 				CFA0589C202F6F2E005E6347 /* AppDelegate.swift in Sources */,
+				CFA058D520303A07005E6347 /* SettingsViewController.swift in Sources */,
+				CFA058D8203C943A005E6347 /* CommonUttils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
