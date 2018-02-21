@@ -27,14 +27,17 @@ class CommonUttils: NSObject {
     }
     
     func setHomeList(strURL : String)  {
-        var arrTemp: NSMutableArray = []
-         if self.getHomeList() as? NSMutableArray != nil {
-         arrTemp = self.getHomeList() as! NSMutableArray
-            arrTemp .add(strURL)
-            
-        }
-         else{
-            arrTemp .add(strURL)}
+        var anyTemp: AnyObject = self.getHomeList()
+        var arrTemp: [String] = []
+//         if anyTemp as? NSMutableArray != nil {
+            arrTemp = anyTemp as! [String]
+            if !(arrTemp.contains(strURL)){
+             arrTemp.append(strURL)
+            }
+//
+//        }
+//         else{
+//               arrTemp.append(strURL)}
         
         self.setUserData(key: "homelist", value: arrTemp as AnyObject)
     }

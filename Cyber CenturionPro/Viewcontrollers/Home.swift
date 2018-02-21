@@ -19,12 +19,12 @@ class Home: UIViewController, UITableViewDelegate,UITableViewDataSource, UIGestu
     @IBOutlet weak var tbl_AddedListToHome: UITableView!
     
     var arrOverlayMenuList: NSMutableArray = []
-    var arrAddedHomeList: NSMutableArray = []
+    var arrAddedHomeList: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         arrOverlayMenuList =  ["Go to top", "Add to home", "Find in page", "Screenshot", "Share", "Settings"]
         if CommonUttils().getHomeList() as? NSMutableArray != nil {
-             arrAddedHomeList = CommonUttils().getHomeList() as! NSMutableArray
+             arrAddedHomeList = CommonUttils().getHomeList() as! [String]
         }
        
         
@@ -76,7 +76,7 @@ class Home: UIViewController, UITableViewDelegate,UITableViewDataSource, UIGestu
             cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "CELL")
         }
         if (tableView == tbl_AddedListToHome) {
-            cell!.textLabel?.text = arrAddedHomeList.object(at: indexPath.row) as? String
+            cell!.textLabel?.text = arrAddedHomeList[indexPath.row] as? String
         }
         else{
         cell!.textLabel?.text = arrOverlayMenuList.object(at: indexPath.row) as? String
@@ -91,10 +91,10 @@ class Home: UIViewController, UITableViewDelegate,UITableViewDataSource, UIGestu
         case 1:
             if !((txt_URLTextField.text?.isEmpty)!){
             CommonUttils().setHomeList(strURL: (self.txt_URLTextField.text)!)
-            if CommonUttils().getHomeList() as? NSMutableArray != nil {
-                arrAddedHomeList = CommonUttils().getHomeList() as! NSMutableArray
+//            if CommonUttils().getHomeList()  as! [String] != nil {
+                arrAddedHomeList = CommonUttils().getHomeList() as! [String]
                 tbl_AddedListToHome.reloadData()
-                }
+//                }
             }
             else{
                 let alert = UIAlertController(title: "Alert", message: "URL should not be empty", preferredStyle: UIAlertControllerStyle.alert)
