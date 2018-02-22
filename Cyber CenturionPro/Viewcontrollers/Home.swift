@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-class Home: UIViewController, UITableViewDelegate,UITableViewDataSource, UIGestureRecognizerDelegate, UIWebViewDelegate {
+class Home: UIViewController, UITableViewDelegate,UITableViewDataSource, UIGestureRecognizerDelegate, UIWebViewDelegate, UITextFieldDelegate, WKNavigationDelegate {
 
     @IBOutlet weak var view_OverLayMenuInner: UIView!
     @IBOutlet weak var view_OverLayMenuOuter: UIView!
@@ -31,6 +31,7 @@ class Home: UIViewController, UITableViewDelegate,UITableViewDataSource, UIGestu
         let gestureSingleTap = UITapGestureRecognizer(target: self, action: #selector(self.gesture_OutsideMenuList(_:)))
         gestureSingleTap.delegate = self
         view_OverLayMenuInner.addGestureRecognizer(gestureSingleTap)
+        webview_Browser.navigationDelegate = self
     }
 
    
@@ -91,10 +92,11 @@ class Home: UIViewController, UITableViewDelegate,UITableViewDataSource, UIGestu
         case 1:
             if !((txt_URLTextField.text?.isEmpty)!){
             CommonUttils().setHomeList(strURL: (self.txt_URLTextField.text)!)
-//            if CommonUttils().getHomeList()  as! [String] != nil {
+
                 arrAddedHomeList = CommonUttils().getHomeList() as! [String]
                 tbl_AddedListToHome.reloadData()
-//                }
+                self.view_OverLayMenuOuter.isHidden = true
+
             }
             else{
                 let alert = UIAlertController(title: "Alert", message: "URL should not be empty", preferredStyle: UIAlertControllerStyle.alert)
@@ -112,5 +114,37 @@ class Home: UIViewController, UITableViewDelegate,UITableViewDataSource, UIGestu
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       
+        self.loadURLToWebView()
+        return true
+    }
+    func loadURLToWebView()  {
+        var strRawURL = self.txt_URLTextField.text!
+         var str_URLText:String = strRawURL
+        if !(strRawURL.contains(".com") || strRawURL.contains(".co")) {
+          str_URLText = "http://www.google.com/search?q=\(strRawURL)"
+        }
+        else if !(strRawURL.contains("http")) {
+            str_URLText = "http://\(strRawURL)"
+        }
+        
+        
+        
+        let url:URL = URL(string: str_URLText)!
+        let urlRequest:URLRequest = URLRequest(url: url)
+        webview_Browser.load(urlRequest)
+        self.txt_URLTextField.resignFirstResponder()
+        self.webview_Browser.isHidden = false
+        self.tbl_AddedListToHome.isHidden = true
+    }
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        txt_URLTextField.text = webView.url?.absoluteString
+    }
+    @IBAction func btn_RefreshClick(_ sender: Any) {
+        self.loadURLToWebView()
+    }
+    
+    
 }
 

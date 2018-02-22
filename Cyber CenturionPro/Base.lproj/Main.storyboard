@@ -24,21 +24,24 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Fi-zZ-4rL">
                                         <rect key="frame" x="8" y="27" width="258" height="38"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8z-l5-YS5">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8z-l5-YS5">
                                                 <rect key="frame" x="5" y="4" width="35" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="VRR-ba-khw"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="nRe-Em-JRp"/>
+                                                    <constraint firstAttribute="width" constant="35" id="nRe-Em-JRp"/>
                                                 </constraints>
-                                                <state key="normal" title="Bu"/>
+                                                <state key="normal" image="ic_action_bookmark_default_dark.png"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhS-YX-QvB">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhS-YX-QvB">
                                                 <rect key="frame" x="219" y="4" width="35" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="1e4-la-Lz2"/>
+                                                    <constraint firstAttribute="width" constant="35" id="1e4-la-Lz2"/>
                                                     <constraint firstAttribute="height" constant="30" id="w3F-bw-YIi"/>
                                                 </constraints>
-                                                <state key="normal" title="Bu"/>
+                                                <state key="normal" image="ic_action_refresh_default.png"/>
+                                                <connections>
+                                                    <action selector="btn_RefreshClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5km-ug-7do"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lj2-9d-MC4">
                                                 <rect key="frame" x="45" y="4" width="167" height="30"/>
@@ -65,13 +68,13 @@
                                             <constraint firstItem="Z8z-l5-YS5" firstAttribute="leading" secondItem="3Fi-zZ-4rL" secondAttribute="leading" constant="5" id="zNi-a9-lKc"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZA-qr-s0B">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZA-qr-s0B">
                                         <rect key="frame" x="271" y="27" width="43" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="gRc-4A-A5y"/>
                                             <constraint firstAttribute="width" constant="43" id="y2d-sS-Kgq"/>
                                         </constraints>
-                                        <state key="normal" title="Bu"/>
+                                        <state key="normal" image="ic_action_overflow_default.png"/>
                                         <connections>
                                             <action selector="btn_MenuClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NtL-9c-5kb"/>
                                         </connections>
@@ -107,7 +110,7 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVr-Gj-l9r">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
-                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xxs-ve-hk2">
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xxs-ve-hk2">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -264,4 +267,9 @@
             <point key="canvasLocation" x="332" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_action_bookmark_default_dark.png" width="96" height="96"/>
+        <image name="ic_action_overflow_default.png" width="96" height="96"/>
+        <image name="ic_action_refresh_default.png" width="96" height="96"/>
+    </resources>
 </document>
