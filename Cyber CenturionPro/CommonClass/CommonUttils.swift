@@ -29,11 +29,35 @@ class CommonUttils: NSObject {
     func setHomeList(strURL : String)  {
         let anyTemp: AnyObject = self.getHomeList()
         var arrTemp: [String] = []
+        if !(anyTemp is NSNull){
         arrTemp = anyTemp as! [String]
+        }
             if !(arrTemp.contains(strURL)){
              arrTemp.append(strURL)
             }
       
         self.setUserData(key: "homelist", value: arrTemp as AnyObject)
     }
+    func getHistoryList() -> AnyObject {
+        let arrTemp: AnyObject = (self.getUserData(key: "historylist") as? AnyObject)!
+        
+        return arrTemp
+        
+        
+    }
+    
+    func setHistoryList(strURL : String)  {
+        let anyTemp: AnyObject = self.getHistoryList()
+        var arrTemp: [String] = []
+        if !(anyTemp is NSNull){
+            arrTemp = anyTemp as! [String]
+        }
+        if !(arrTemp.contains(strURL)){
+            arrTemp.append(strURL)
+        }
+        
+        self.setUserData(key: "historylist", value: arrTemp as AnyObject)
+    }
+    
+    
 }
