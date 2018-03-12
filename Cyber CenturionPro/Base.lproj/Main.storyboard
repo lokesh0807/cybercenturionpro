@@ -46,7 +46,7 @@
                                                 <rect key="frame" x="45" y="4" width="167" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="go"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="C63-0r-EIK"/>
                                                 </connections>
@@ -99,7 +99,7 @@
                                 </connections>
                             </tableView>
                             <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ne-U7-p3A">
-                                <rect key="frame" x="0.0" y="70" width="320" height="410"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="366"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -109,6 +109,28 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fFw-If-HIh">
                                 <rect key="frame" x="-20" y="70" width="360" height="2"/>
                             </progressView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gk7-Mj-Vxm">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="&lt;" width="39" id="VmS-GB-O0k">
+                                        <connections>
+                                            <action selector="btn_BackClick:" destination="BYZ-38-t0r" id="V9c-eP-K8J"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="w6l-xO-W8C"/>
+                                    <barButtonItem title="&gt;" width="49" id="htv-av-YoA">
+                                        <connections>
+                                            <action selector="btn_ForwardClick:" destination="BYZ-38-t0r" id="Ia0-Cu-8K1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9QG-EZ-tps"/>
+                                    <barButtonItem title="Item" image="Reload.png" id="wwf-ub-c9u">
+                                        <connections>
+                                            <action selector="btn_ReloadClick:" destination="BYZ-38-t0r" id="8ge-1E-a6c"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVr-Gj-l9r">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
@@ -137,33 +159,11 @@
                                     <constraint firstItem="jre-BL-4Vf" firstAttribute="centerX" secondItem="HVr-Gj-l9r" secondAttribute="centerX" id="UZ4-T9-nq8"/>
                                 </constraints>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gk7-Mj-Vxm">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem title="&lt;" width="39" id="VmS-GB-O0k">
-                                        <connections>
-                                            <action selector="btn_BackClick:" destination="BYZ-38-t0r" id="V9c-eP-K8J"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="w6l-xO-W8C"/>
-                                    <barButtonItem title="&gt;" width="49" id="htv-av-YoA">
-                                        <connections>
-                                            <action selector="btn_ForwardClick:" destination="BYZ-38-t0r" id="Ia0-Cu-8K1"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9QG-EZ-tps"/>
-                                    <barButtonItem title="Item" image="Reload.png" id="wwf-ub-c9u">
-                                        <connections>
-                                            <action selector="btn_ReloadClick:" destination="BYZ-38-t0r" id="8ge-1E-a6c"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8ne-U7-p3A" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0On-SJ-MVn"/>
                             <constraint firstItem="HVr-Gj-l9r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0ZW-jH-7K4"/>
+                            <constraint firstItem="gk7-Mj-Vxm" firstAttribute="top" secondItem="8ne-U7-p3A" secondAttribute="bottom" id="14K-zC-m0s"/>
                             <constraint firstAttribute="trailing" secondItem="fFw-If-HIh" secondAttribute="trailing" constant="-20" id="2gS-cd-ttx"/>
                             <constraint firstItem="X1K-6G-1wG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="42a-Q7-G0U"/>
                             <constraint firstItem="gk7-Mj-Vxm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FpN-kb-fRX"/>
