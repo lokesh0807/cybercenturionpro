@@ -183,6 +183,10 @@ class Home: UIViewController, UITableViewDelegate,UITableViewDataSource, UIGestu
 //            arrAddedHomeList = CommonUttils().getHistoryList() as! [String]
         }
     }
+    func startFilter(completionHandler: @escaping (Error?) -> Void){
+        print("Test")
+    }
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         txt_URLTextField.text = webView.url?.absoluteString
         self.setupHistory()
