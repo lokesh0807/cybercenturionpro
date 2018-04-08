@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AA28F552079F47E007ECC1B /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 4AA28F542079F47E007ECC1B /* blockerList.json */; };
+		4AD89711207A56EB008415E9 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 4AD89710207A56EB008415E9 /* blockerList.json */; };
 		6AC48872203F45CE002BA117 /* BlockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC48871203F45CE002BA117 /* BlockListViewController.swift */; };
 		CFA0589C202F6F2E005E6347 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA0589B202F6F2E005E6347 /* AppDelegate.swift */; };
 		CFA058A1202F6F2E005E6347 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA0589F202F6F2E005E6347 /* Main.storyboard */; };
@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4AA28F542079F47E007ECC1B /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		4AD89710207A56EB008415E9 /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = blockerList.json; path = ../../../../Downloads/blockerList.json; sourceTree = "<group>"; };
 		6AC48871203F45CE002BA117 /* BlockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockListViewController.swift; sourceTree = "<group>"; };
 		CFA05898202F6F2E005E6347 /* Cyber CenturionPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cyber CenturionPro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA0589B202F6F2E005E6347 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +116,6 @@
 				CFA058A2202F6F2E005E6347 /* Assets.xcassets */,
 				CFA058A4202F6F2E005E6347 /* LaunchScreen.storyboard */,
 				CFA058A7202F6F2E005E6347 /* Info.plist */,
-				4AA28F542079F47E007ECC1B /* blockerList.json */,
 			);
 			path = "Cyber CenturionPro";
 			sourceTree = "<group>";
@@ -142,6 +141,7 @@
 		CFA058CF20303A06005E6347 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				4AD89710207A56EB008415E9 /* blockerList.json */,
 				CFA058D120303A06005E6347 /* Home.swift */,
 				CFA058D020303A06005E6347 /* OverlayMenuViewController.swift */,
 				CFA058D220303A06005E6347 /* SettingsViewController.swift */,
@@ -268,8 +268,8 @@
 			files = (
 				CFA058A6202F6F2E005E6347 /* LaunchScreen.storyboard in Resources */,
 				CFA058A3202F6F2E005E6347 /* Assets.xcassets in Resources */,
+				4AD89711207A56EB008415E9 /* blockerList.json in Resources */,
 				CFA058A1202F6F2E005E6347 /* Main.storyboard in Resources */,
-				4AA28F552079F47E007ECC1B /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
