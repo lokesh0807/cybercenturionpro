@@ -242,10 +242,10 @@ class Home: UIViewController, UITableViewDelegate,UITableViewDataSource, UIGestu
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueHomeToBlockList"{
-        let segueVC = segue.destination as! BlockListViewController
+       // let segueVC = segue.destination as! BlockListViewController
             print("arrAddedHomeList: \(arrAddedHomeList)")
-        segueVC.arrAddedHomeList = arrAddedHomeList
-        segueVC.strBlockPageTitle = strPageTitle
+        //segueVC.arrAddedHomeList = arrAddedHomeList
+        //segueVC.strBlockPageTitle = strPageTitle
         }
     }
 }
